@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+idea {
+    project {
+        languageLevel = java.toolchain.languageVersion.get().asInt()
+    }
+}
+
+repositories {
+    flatDir {
+        dir 'libs/processing'
+    }
+}
+
+dependencies {
+    implementation name: 'core'
+    implementation name: 'jogl-all'
+    implementation name: 'gluegen-rt'
+}
