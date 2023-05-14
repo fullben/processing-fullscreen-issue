@@ -4,13 +4,11 @@ This is the basic setup to evaluate a bug when trying to run a Processing-based 
 
 ## Getting Started
 
-**Note that the following instructions will only work for Windows. Step 2.ii will be different for other operating systems.**
+**Note that the following instructions will only work for Windows. The steps that need to be performed in the context of other operating systems may differ.**
 
-1. Go to the [Processing download page](https://processing.org/download) and get a newer Processing version (minimum 4.2), unpack the downloaded archive (if you have this version installed already, you may skip this step)
-2. In the unzipped folder, navigate to `core/library`
-   1. Copy `core.jar`, `gluegen-rt.jar`, and `jogl-all.jar` to `<PROJECT_ROOT>/libs/processing`
-   2. Copy the `windows-amd64` folder to `<PROJECT_ROOT>/natives`
+1. Go to the [Processing download page](https://processing.org/download) and get an older Processing version (e.g. 3.5.3), unpack the downloaded archive (if you have this version installed already, you may skip this step)
+2. In the unzipped folder, navigate to `core/library`, and copy all its contents to `<PROJECT_ROOT>/libs/processing`
 
-## Reproducing the Bug
+## Reproducing the Expected Behavior
 
-Once the project has been configured properly, all that needs to be done is to run the `main` method of the `FullscreenApp` class. This should result in an application window appearing, that only occupies a part of the screen it is being displayed on.
+Once the project has been configured properly, all that needs to be done is to run the `main` method of the `FullscreenApp` class. This should result in an application window appearing, that covers the screen completely.
